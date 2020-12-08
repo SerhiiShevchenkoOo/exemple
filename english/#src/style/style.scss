@@ -35,6 +35,7 @@ html {
 	width: 100vw;
 }
 body {
+	overflow: hidden;
 	outline: none;
 	height: 100%;
 	background: #eee;
@@ -145,12 +146,12 @@ body {
 	}
 }
 .page-container {
+	overflow: hidden;
 	padding-left: 80px;
 	height: 100%;
 	width: 100%;
 }
 .page {
-	overflow: auto;
 	width: 100%;
 	height: 100%;
 	display: grid;
