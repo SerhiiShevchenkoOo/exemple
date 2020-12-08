@@ -150,7 +150,7 @@ body {
 	width: 100%;
 }
 .page {
-	overflow: scroll;
+	overflow: auto;
 	width: 100%;
 	height: 100%;
 	display: grid;
@@ -605,9 +605,6 @@ body {
 		display: flex;
 		align-items: center;
 	}
-}
-#scroll {
-	overflow: scroll;
 }
 
 .content-hacker__item {

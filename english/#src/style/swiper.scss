@@ -157,6 +157,7 @@
 	opacity: 1;
 }
 .swiper-slide {
+	overflow-x: hidden;
 	overflow-y: auto;
 	transition: 1.4s ease;
 	&__pages {
@@ -175,4 +176,7 @@
 }
 .swiper-container {
 	height: 100%;
+}
+::-webkit-scrollbar {
+	display: none;
 }
