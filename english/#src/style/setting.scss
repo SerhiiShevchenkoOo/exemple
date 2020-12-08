@@ -1,0 +1,169 @@
+//====================================================================================================
+.--off {
+	transition: 1s ease;
+	transform: translateX(-100%);
+}
+.new-game {
+	font-family: "VT323";
+	color: #5bf870;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	transition: 1s ease;
+	left: 0;
+	bottom: -100%;
+	height: 100%;
+	width: 100%;
+
+	.--on {
+		transition: 1s ease;
+		transform: translateX(0);
+	}
+}
+//=======================game field
+
+.game-field {
+	position: absolute;
+	min-height: 100%;
+	width: 100%;
+}
+
+.deactive {
+	transform: translateX(100%);
+	transition: 1s ease;
+}
+.pages {
+	transition: 1s ease;
+
+	font-size: 30px;
+	line-height: 130%;
+	letter-spacing: 0.07rem;
+	font-family: "VT323";
+	color: #5bf870;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	&__back-arrow {
+		z-index: 5;
+		cursor: pointer;
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		height: 50px;
+		width: 50px;
+
+		background: url("./../assets/image/return.svg") 0 0 / contain no-repeat;
+		&:hover,
+		&:focus {
+			border: 2px solid #5bf870;
+			border-radius: 5px;
+		}
+	}
+	&__ok {
+		cursor: pointer;
+		margin-left: 10px;
+		height: 40px;
+		width: 40px;
+		background: url("./../assets/image/verified.svg") 0 0 / contain no-repeat;
+		&:hover,
+		&:focus {
+			border: 2px solid #5bf870;
+			border-radius: 5px;
+		}
+	}
+}
+
+.New_game {
+	z-index: 1;
+	&__message {
+		word-wrap: normal;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: "VT323";
+
+		padding: 5px;
+		font-size: 25px;
+		min-width: 100px;
+		line-height: 150%;
+
+		&:focus,
+		&:hover {
+			border-radius: 5px;
+			border: 2px solid #00cc00;
+		}
+		&:after {
+			content: "_";
+			animation: colorBlink 1s infinite;
+		}
+	}
+}
+.game-paused {
+	opacity: 0.3;
+}
+.game {
+	transition: ease 0.3s;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__field {
+		margin: auto;
+		width: 90%;
+		height: 90%;
+		position: relative;
+		min-height: 400px;
+
+		font-size: 25px;
+	}
+}
+.info {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 40px;
+}
+.cell {
+	transition: 0.3s ease all;
+	&:hover {
+		background-color: #00cc00;
+		transform: scale(0.95);
+	}
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #5bf870;
+	border: 2px solid #00cc00;
+	position: absolute;
+}
+.Saved_game {
+	background-color: black;
+	p {
+		animation: colorBlink 1s ease infinite;
+	}
+}
+.Setting {
+	p {
+		transition: 0.3s;
+		cursor: pointer;
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+	z-index: 5;
+	flex-direction: column;
+}
